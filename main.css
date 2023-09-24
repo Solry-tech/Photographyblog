@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+    --white: #ddd;
+    --dark: #111;
+    --darkGrey: #474b4f;
+    --lightGrey: #6b6e70;
+    --lightGreen: #86c232;
+    --darkGreen: #61892f;
+    --transition: all 0.5s ease;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    line-height: 1.6;
+}
+img{
+    width: 100%;
+    display: block;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 15px 0;
+}
+
+/********************** Utility Classes *******************/
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 90vw;
+    margin: 0 auto;
+}
+.btn{
+    background: turquoise;
+    border: none;
+    display: block;
+    width: 150px;
+    text-align: center;
+    color: var(--darkGreen);
+    text-transform: uppercase;
+    background: transparent;
+    font-size: 15px;
+    padding: 12px;
+    border: 2px solid teal;
+    border-radius: 25px;
+    margin: 15px 0;
+    transition: var(--transition);
+} 
+.btn:hover{
+    background: turquoise;
+    color: #fff;
+}
+.active{
+    color: turquoise!important;
+}
+
+/**************** end of Utility Classes *******************/
+
+/********************** Header styling *********************/
+
+.header{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("images/header.jpg") center/cover no-repeat;
+    color: #fff;
+}
+.nav-section {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    background: #000;
+}
+.top-nav {
+    float: 1;
+    padding-top: 20px;
+}
+.top-nav a{
+    color: #f3ebeb;
+}
+.brand-and-navBtn{
+    position: relative;
+    z-index: 999;
+    height: 70px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 15px 25px;
+    color: var(--white);
+}
+.brand-name{
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+/****** not position *******/
+
+.top-nav{
+    background: #000;
+    transition: var(--transition);
+}
+
+.search-icon{
+    display: none;
+}
+.top-nav ul li{
+    padding: 0px 10px;
+    display: inline;
+}
+.top-nav ul a{ 
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    
+    
+    
+}
+.top-nav ul a::after{
+    content: "";
+    height: 2px;
+    background: var(--lightGreen);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transition: var(--transition);
+}
+.top-nav ul a:hover::after{
+    width: 100px;
+}
+.about{
+    margin-top: 50px; 
+}
+.about-content img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+.about-img{
+    background: #fff;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.about-content h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: turquoise;
+}
+.about-content h3{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 100;
+    background: rgba(255, 255, 255, 0.1);
+    width: 600px;
+    margin: 35px auto;
+    text-align: center;
+}
+blockquote{
+    font-size: 20px;
+    font-weight: 300;
+    opacity: 0.9;
+    width: 60vw;
+    margin: 45px auto 15px auto;
+    text-align: center;
+}
+blockquote span{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: lightblue;
+    font-weight: 300;
+    letter-spacing: 5px;
+    display: block;
+}
+.social-icons{
+    width: 350px;
+    margin: 40px auto 0 auto;
+    padding-bottom: 30px;
+}
+.social-icons ul a{
+    color: #fff;
+    font-size: 30px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+.social-icons ul{
+    display: flex;
+    justify-content: space-around;
+}
+.social-icons ul a:hover{
+    background: turquoise;
+    border-color: var(--lightGreen);
+}
+/********************* End of Header ***********************/
+
+/*********************** Main section ********************/
+
+/**************** index.html *************/
+/* section one */
+.section-one{
+    margin: 40px 0px;
+    min-height: 100vh;
+    
+}
+.sec-one-left{
+    height: 100vh;
+    background: url("images/project-main.jpg") center/cover no-repeat;
+    box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+}
+.sec-one-left div{
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+}
+.sec-one-left div h3{
+    font-size: 28px;
+    opacity: 0.9;
+}
+.sec-one-left div p{
+    font-weight: 300;
+    opacity: 0.8;
+}
+.sec-one-right h3{
+    color: var(--lightGrey);
+}
+.sec-one-right >h3{
+    text-align: center;
+}
+.sec-one-right p{
+    opacity: 0.9;
+    font-weight: 300;
+}
+.work-content{
+    margin: 50px 0;
+}
+.work-imgs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+}
+.work-img-1{
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url("images/porject-1.jpg") center/cover no-repeat;
+    height: 400px;
+    transition: var(--transition);
+}
+.work-img-2{
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url("images/porject-2.jpg") center/cover no-repeat;
+    height: 400px;
+    transition: var(--transition);
+}
+.work-imgs div:hover{
+    box-shadow: 0 0 8px #000;
+    -webkit-box-shadow: 0 0 8px #000;
+    -moz-box-shadow: 0 0 8px #000;
+}
+
+
+/* section two */
+.section-two{
+    margin: 40px 0;
+    padding: 155px;
+    margin: 100px 0px 200px 0px;
+}
+
+/* .insta-imgs{ 
+    display: inline-block;
+    grid-template-columns: repeat(2, 1fr);
+}
+.insta-imgs > div{
+    position: relative;
+}
+.icon-overlay{
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    background: rgb(1, 111, 111,0.3);
+    opacity: 0;
+    transition: var(--transition);
+}
+.insta-imgs > div:hover .icon-overlay{
+    opacity: 1;
+ } */
+ div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 280px;
+}
+div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+
+/************* end of index.html ***********/
+
+
+/******************* Footer Styling *****************/
+.footer{
+    background: teal;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 150px;
+}
+.footer-container h2{
+    color: turquoise;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 7px;
+}
+.footer-container p{
+    opacity: 0.7;
+}
+.subs{
+    background: #000;
+    width: 340px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+    border: 1px solid #fff;
+}
+.subs input{
+    flex: 60%;
+    background: transparent;
+    font-size: 16px;
+    padding: 0 5px;
+    outline: 0;
+    color: #fff;
+    padding: 15px 10px;
+}
+.subs button{
+    flex: 30%;
+    font-size: 16px;
+    padding: 16px 17px;
+    font-weight: bold;
+    background: var(--lightGreen);
+    border: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.subs button:hover{
+    color: #fff;
+}
+.footer > p{
+    text-align: center;
+    font-size: 14px;
+}
+
+/****************** blog.html ****************/
+
+/* section four */
+.section-four{
+    margin: 40px 0;
+}
+
+.section-four img {
+    width: 60%;
+}
+.blog{
+    margin: 40px 0;
+}
+.blog-content{
+    padding: 25px;
+    background: #f7f7f7;
+}
+.blog span{
+    display: block;
+}
+.badge{
+    background: var(--lightGreen);
+    width: 140px;
+    border-radius: 5px;
+    padding: 5px 0;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.misc-info{
+    font-size: 14px;
+    color: var(--dark);
+    margin-top: 16px;
+}
+.blog-title{
+    font-size: 20px;
+    font-weight: 900;
+}
+.blog-text{
+    font-weight: 300;
+    width: 50%;
+}
+
+/*************** end of blog.html ***********/
+
+
+
